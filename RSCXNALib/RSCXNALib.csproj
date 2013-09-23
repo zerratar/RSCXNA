@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56ABED1F-3D85-4B9A-ADB0-9B8AEAEB125B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RSCXNALib</RootNamespace>
+    <AssemblyName>RSCXNALib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataEncryption.cs" />
+    <Compile Include="Data\BZip2Decompressor.cs" />
+    <Compile Include="Data\BZip2BlockEntry.cs" />
+    <Compile Include="Data\DataFileDecrypter.cs" />
+    <Compile Include="Data\DataFileVariables.cs" />
+    <Compile Include="Data\DataOperations.cs" />
+    <Compile Include="Data\RectangularArrays.cs" />
+    <Compile Include="Extensions\MemoryStreamExtensions.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Data\AudioReader.cs" />
+    <Compile Include="Data\Data.cs" />
+    <Compile Include="Data\old\DataEncryption.cs" />
+    <Compile Include="Data\old\DataFileDecrypter.cs" />
+    <Compile Include="Data\old\DataFileVariables.cs" />
+    <Compile Include="Data\old\DataOperations.cs" />
+    <Compile Include="GameApplet.cs" />
+    <Compile Include="GameAppletMiddleMan.cs" />
+    <Compile Include="GameFrame.cs" />
+    <Compile Include="GameImageMiddleMan.cs" />
+    <Compile Include="Game\Cameras\CameraModel.cs" />
+    <Compile Include="Game\Cameras\Camera.cs" />
+    <Compile Include="Game\Cameras\CameraVariable.cs" />
+    <Compile Include="Game\ChatFilter.cs" />
+    <Compile Include="Game\ChatMessage.cs" />
+    <Compile Include="Game\EngineHandle.cs" />
+    <Compile Include="Game\GameImage.cs" />
+    <Compile Include="Game\GameObject.cs" />
+    <Compile Include="Game\Mob.cs" />
+    <Compile Include="Extensions\GraphicsDeviceExtensions.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Models\Sector.cs" />
+    <Compile Include="Models\Sprite.cs" />
+    <Compile Include="Models\Tile.cs" />
+    <Compile Include="mudclient.cs" />
+    <Compile Include="Net\LoginDataEncryption.cs" />
+    <Compile Include="Net\PacketConstruction.cs" />
+    <Compile Include="Net\StreamClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
