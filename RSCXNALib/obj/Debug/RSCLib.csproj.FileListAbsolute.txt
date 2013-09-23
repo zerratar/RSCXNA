@@ -1,0 +1,15 @@
+c:\users\karlj\documents\visual studio 2010\Projects\RSCLib\RSCLib\obj\Debug\ResolveAssemblyReference.cache
+c:\users\karlj\documents\visual studio 2010\Projects\RSCLib\RSCLib\bin\Debug\RSCLib.dll
+c:\users\karlj\documents\visual studio 2010\Projects\RSCLib\RSCLib\bin\Debug\RSCLib.pdb
+c:\users\karlj\documents\visual studio 2010\Projects\RSCLib\RSCLib\obj\Debug\RSCLib.dll
+c:\users\karlj\documents\visual studio 2010\Projects\RSCLib\RSCLib\obj\Debug\RSCLib.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCLib\RSCLib\obj\Debug\RSCLib.dll
+C:\Users\Karlj\Dropbox\Projects\Active\RSCLib\RSCLib\bin\Debug\RSCLib.dll
+C:\Users\Karlj\Dropbox\Projects\Active\RSCLib\RSCLib\bin\Debug\RSCLib.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCLib\RSCLib\obj\Debug\RSCLib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCLib\RSCLib\bin\Debug\RSCLib.dll
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCLib\RSCLib\bin\Debug\RSCLib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCLib\RSCLib\obj\Debug\RSCLib.dll
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCLib\RSCLib\obj\Debug\RSCLib.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCLib\RSCLib\obj\Debug\RSCLib.csprojResolveAssemblyReference.cache
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCLib\RSCLib\obj\Debug\RSCLib.csprojResolveAssemblyReference.cache

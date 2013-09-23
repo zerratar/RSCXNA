@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>fonts\gameFont12.spritefont</Source>
+      <Name>fonts\gameFont12</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont12.xnb</Output>
+      <Time>2012-11-12T11:30:12+01:00</Time>
+    </Item>
+    <Item>
+      <Source>fonts\gameFont16.spritefont</Source>
+      <Name>fonts\gameFont16</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont16.xnb</Output>
+      <Time>2012-11-12T11:30:12+01:00</Time>
+    </Item>
+    <Item>
+      <Source>fonts\gameFont20.spritefont</Source>
+      <Name>fonts\gameFont20</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont20.xnb</Output>
+      <Time>2012-11-12T11:30:12+01:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNAContent\</RootDirectory>
+      <LoggerRootDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNAContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-08-30T21:26:30.9651015+02:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

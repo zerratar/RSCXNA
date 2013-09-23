@@ -45,7 +45,7 @@ namespace RSCXNA
 
 	        graphics.PreferredBackBufferWidth = 512;//1280; // 512;
 		        graphics.PreferredBackBufferHeight = 346;//720; // 346;
-
+			IsFixedTimeStep=false;
             graphics.SynchronizeWithVerticalRetrace = true;
             Window.Title = "RuneScape Classic";
             Content.RootDirectory = "Content";

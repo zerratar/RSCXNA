@@ -1,0 +1,112 @@
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\config.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\entity.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\entity.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\filter.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\fonts.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\land.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\land.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\maps.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\maps.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\media.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\models.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\sounds.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\textures.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont12.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont16.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont20.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\RSCXNA.csprojResolveAssemblyReference.cache
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNA.exe
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNA.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNALib.dll
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNALib.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\RSCXNA.exe
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\RSCXNA.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\config.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\entity.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\entity.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\filter.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\fonts.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\land.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\land.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\maps.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\maps.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\media.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\models.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\sounds.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\data\textures.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont12.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont16.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont20.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNA.exe
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNA.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNALib.dll
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNALib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\RSCXNA.csprojResolveAssemblyReference.cache
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\RSCXNA.exe
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\obj\x86\Debug\RSCXNA.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNA.exe.config
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSC2D\RSC2D\bin\x86\Debug\RSCXNA.exe.config
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\config.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\entity.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\entity.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\filter.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\fonts.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\land.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\land.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\maps.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\maps.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\media.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\models.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\sounds.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\textures.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont12.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont16.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont20.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNA.exe.config
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNA.exe
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNA.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNALib.dll
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNALib.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\RSCXNA.exe
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\RSCXNA.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\config.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\entity.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\entity.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\filter.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\fonts.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\land.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\land.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\maps.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\maps.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\media.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\models.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\sounds.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\data\textures.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont12.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont16.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont20.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNA.exe.config
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNA.exe
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNA.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNALib.dll
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\RSCXNALib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\RSCXNA.csprojResolveAssemblyReference.cache
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\RSCXNA.exe
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\RSCXNA.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\obj\x86\Debug\RSCXNA.csprojResolveAssemblyReference.cache
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\loading_background.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\loading_background2.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\zeldalogo.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\logo2.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\yuno4.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\loading_background.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\loading_background2.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\zeldalogo.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\logo2.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\yuno4.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\pattern_40.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\pattern_40.xnb

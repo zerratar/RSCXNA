@@ -1,0 +1,48 @@
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\config.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\entity.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\entity.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\filter.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\fonts.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\land.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\land.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\maps.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\maps.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\media.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\models.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\sounds.mem
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\textures.jag
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2D.exe
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2D.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\RSC2D.csprojResolveAssemblyReference.cache
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\RSC2D.exe
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\RSC2D.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont12.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont16.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont20.xnb
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2DLib.dll
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2DLib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\config.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\entity.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\entity.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\filter.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\fonts.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\land.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\land.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\maps.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\maps.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\media.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\models.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\sounds.mem
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\data\textures.jag
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont12.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont16.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\Content\fonts\gameFont20.xnb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2D.exe
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2D.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2DLib.dll
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\bin\x86\Debug\RSC2DLib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\RSC2D.csprojResolveAssemblyReference.cache
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\RSC2D.exe
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2D\obj\x86\Debug\RSC2D.pdb

@@ -1,0 +1,2 @@
+C:\Users\Karlj\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2DContent\obj\x86\Debug\RSC2DContent.contentprojResolveAssemblyReference.cache
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSC2D\RSC2D\RSC2DContent\obj\x86\Debug\RSC2DContent.contentprojResolveAssemblyReference.cache

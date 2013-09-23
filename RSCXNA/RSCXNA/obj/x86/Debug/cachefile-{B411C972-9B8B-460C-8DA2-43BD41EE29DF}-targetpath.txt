@@ -1,0 +1,9 @@
+Content\fonts\gameFont12.xnb
+Content\fonts\gameFont16.xnb
+Content\fonts\gameFont20.xnb
+Content\sprites\loading_background.xnb
+Content\sprites\loading_background2.xnb
+Content\sprites\zeldalogo.xnb
+Content\sprites\logo2.xnb
+Content\sprites\yuno4.xnb
+Content\sprites\pattern_40.xnb

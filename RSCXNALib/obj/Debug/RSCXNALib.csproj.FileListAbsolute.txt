@@ -1,0 +1,10 @@
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNALib\bin\Debug\RSCXNALib.dll
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNALib\bin\Debug\RSCXNALib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNALib\obj\Debug\RSCXNALib.dll
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNALib\obj\Debug\RSCXNALib.pdb
+E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNALib\obj\Debug\RSCXNALib.csprojResolveAssemblyReference.cache
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNALib\bin\Debug\RSCXNALib.dll
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNALib\bin\Debug\RSCXNALib.pdb
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNALib\obj\Debug\RSCXNALib.csprojResolveAssemblyReference.cache
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNALib\obj\Debug\RSCXNALib.dll
+C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNALib\obj\Debug\RSCXNALib.pdb
