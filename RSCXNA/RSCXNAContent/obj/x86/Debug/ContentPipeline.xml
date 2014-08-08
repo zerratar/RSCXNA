@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont12.xnb</Output>
-      <Time>2012-11-12T11:30:12+01:00</Time>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont12.xnb</Output>
+      <Time>2013-09-23T16:00:36.7743851+02:00</Time>
     </Item>
     <Item>
       <Source>fonts\gameFont16.spritefont</Source>
@@ -16,8 +16,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont16.xnb</Output>
-      <Time>2012-11-12T11:30:12+01:00</Time>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont16.xnb</Output>
+      <Time>2013-09-23T16:00:36.7763852+02:00</Time>
     </Item>
     <Item>
       <Source>fonts\gameFont20.spritefont</Source>
@@ -25,8 +25,62 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont20.xnb</Output>
-      <Time>2012-11-12T11:30:12+01:00</Time>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\fonts\gameFont20.xnb</Output>
+      <Time>2013-09-23T16:00:36.7783853+02:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\loading_background.jpg</Source>
+      <Name>sprites\loading_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\loading_background.xnb</Output>
+      <Time>2013-09-23T16:00:36+02:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\loading_background2.jpg</Source>
+      <Name>sprites\loading_background2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\loading_background2.xnb</Output>
+      <Time>2013-09-23T16:00:36+02:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\zeldalogo.png</Source>
+      <Name>sprites\zeldalogo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\zeldalogo.xnb</Output>
+      <Time>2013-09-23T16:00:36+02:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\logo2.png</Source>
+      <Name>sprites\logo2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\logo2.xnb</Output>
+      <Time>2013-09-23T16:00:36+02:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\yuno4.png</Source>
+      <Name>sprites\yuno4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\yuno4.xnb</Output>
+      <Time>2013-09-23T16:00:36+02:00</Time>
+    </Item>
+    <Item>
+      <Source>sprites\pattern_40.png</Source>
+      <Name>sprites\pattern_40</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\sprites\pattern_40.xnb</Output>
+      <Time>2013-09-23T16:00:36+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -34,10 +88,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNAContent\</RootDirectory>
-      <LoggerRootDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNAContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\Users\Kaaru\Documents\My Dropbox\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNAContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNAContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Karlj\Dropbox\Projects\Active\RSCXNA\RSCXNA\RSCXNA\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -66,7 +120,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-08-30T21:26:30.9651015+02:00</Value>
+        <Value>2014-08-01T11:53:49.3358712+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

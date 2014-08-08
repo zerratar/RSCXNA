@@ -11,7 +11,7 @@ namespace RSCXNALib.Game
 	{
 		public static Random ran = new Random();
 
-		public void gjd(int x, int y, int i1)
+		public void SetTileType(int x, int y, int i1)
 		{
 			int j1 = x / 12;
 			int k1 = y / 12;
@@ -367,9 +367,9 @@ namespace RSCXNALib.Game
 							i4 = 0;
 						if (getTileGroundOverlayIndex(j2 - 1, i3 - 1, height) > 0 && Data.Data.tileGroundOverlayTypes[getTileGroundOverlayIndex(j2 - 1, i3 - 1, height) - 1] == 4)
 							i4 = 0;
-						int j5 = sectionObj.getVertexIndex(j2 * 128, i4, i3 * 128);
-						int j7 = (int)(Helper.Random.NextDouble() * 10D) - 5;
-						sectionObj.cmh(j5, j7);
+						int vertexIndex = sectionObj.getVertexIndex(j2 * 128, i4, i3 * 128);
+						int color = (int)(Helper.Random.NextDouble() * 10D) - 5;
+						sectionObj.SetVertexColor(vertexIndex, color);
 					}
 
 				}
@@ -645,7 +645,7 @@ namespace RSCXNALib.Game
 					int k3 = getHorizontalWall(x1, y1);
 					if (k3 > 0 && (Data.Data.wallObjectUnknown[k3 - 1] == 0 || ghh))
 					{
-						gli(currentSectionObject, k3 - 1, x1, y1, x1 + 1, y1);
+						makeWall(currentSectionObject, k3 - 1, x1, y1, x1 + 1, y1);
 						if (freshLoad && Data.Data.wallObjectType[k3 - 1] != 0)
 						{
 							tiles[x1][y1] |= 1;
@@ -658,7 +658,7 @@ namespace RSCXNALib.Game
 					k3 = getVerticalWall(x1, y1);
 					if (k3 > 0 && (Data.Data.wallObjectUnknown[k3 - 1] == 0 || ghh))
 					{
-						gli(currentSectionObject, k3 - 1, x1, y1, x1, y1 + 1);
+						makeWall(currentSectionObject, k3 - 1, x1, y1, x1, y1 + 1);
 						if (freshLoad && Data.Data.wallObjectType[k3 - 1] != 0)
 						{
 							tiles[x1][y1] |= 2;
@@ -671,7 +671,7 @@ namespace RSCXNALib.Game
 					k3 = getDiagonalWall(x1, y1);
 					if (k3 > 0 && k3 < 12000 && (Data.Data.wallObjectUnknown[k3 - 1] == 0 || ghh))
 					{
-						gli(currentSectionObject, k3 - 1, x1, y1, x1 + 1, y1 + 1);
+						makeWall(currentSectionObject, k3 - 1, x1, y1, x1 + 1, y1 + 1);
 						if (freshLoad && Data.Data.wallObjectType[k3 - 1] != 0)
 							tiles[x1][y1] |= 0x20;
 						if (freshLoad)
@@ -683,7 +683,7 @@ namespace RSCXNALib.Game
 					}
 					if (k3 > 12000 && k3 < 24000 && (Data.Data.wallObjectUnknown[k3 - 12001] == 0 || ghh))
 					{
-						gli(currentSectionObject, k3 - 12001, x1 + 1, y1, x1, y1 + 1);
+						makeWall(currentSectionObject, k3 - 12001, x1 + 1, y1, x1, y1 + 1);
 						if (freshLoad && Data.Data.wallObjectType[k3 - 12001] != 0)
 							tiles[x1][y1] |= 0x10;
 						if (freshLoad)
@@ -707,9 +707,9 @@ namespace RSCXNALib.Game
 			for (int l2 = 0; l2 < 64; l2++)
 				_camera.addModel(wallObject[height][l2]);
 
-			for (int l3 = 0; l3 < 95; l3++)
+			for (int x1 = 0; x1 < 95; x1++)
 			{
-				for (int l4 = 0; l4 < 95; l4++)
+				for (int y1 = 0; y1 < 95; y1++)
 				{
 
 
@@ -725,7 +725,7 @@ namespace RSCXNALib.Game
 						* my thoughts where:
 						*  1. the tiles are being loaded incorrectly???     - ive checked this one lots of times already and they seem to load perfectly fine.
 						*  2. faulty camera?                                - when adding a model/the roofs. Doesnt seem to add more than necessary ( i could be wrong, not checked properly. )
-						*  3. engine handle is rendering them incorrectly ? - any problems with the "gkh" function? most likely not.. Its not easy to really locate the problem.
+						*  3. engine handle is rendering them incorrectly ? - any problems with the "setRoofTile" function? most likely not.. Its not easy to really locate the problem.
 						* 
 						*      Any ideas??
 						*                           
@@ -739,19 +739,19 @@ namespace RSCXNALib.Game
 
 #warning seems to be a problem with rendering the walls
 					/* begin known problem here */
-					int k6 = getHorizontalWall(l3, l4);
-					if (k6 > 0)
-						gkh(k6 - 1, l3, l4, l3 + 1, l4);
-					k6 = getVerticalWall(l3, l4);
-					if (k6 > 0)
-						gkh(k6 - 1, l3, l4, l3, l4 + 1);
+					int wallType = getHorizontalWall(x1, y1);
+					if (wallType > 0)
+						setRoofTile(wallType - 1, x1, y1, x1 + 1, y1);
+					wallType = getVerticalWall(x1, y1);
+					if (wallType > 0)
+						setRoofTile(wallType - 1, x1, y1, x1, y1 + 1);
 
 
-					k6 = getDiagonalWall(l3, l4);
-					if (k6 > 0 && k6 < 12000)
-						gkh(k6 - 1, l3, l4, l3 + 1, l4 + 1);
-					if (k6 > 12000 && k6 < 24000)
-						gkh(k6 - 12001, l3 + 1, l4, l3, l4 + 1);
+					wallType = getDiagonalWall(x1, y1);
+					if (wallType > 0 && wallType < 12000)
+						setRoofTile(wallType - 1, x1, y1, x1 + 1, y1 + 1);
+					if (wallType > 12000 && wallType < 24000)
+						setRoofTile(wallType - 12001, x1 + 1, y1, x1, y1 + 1);
 
 					// argghh! :D
 					// so close, yet so far!.. Haha.. =) 
@@ -1233,9 +1233,9 @@ namespace RSCXNALib.Game
 			{
 				for (int y1 = y; y1 <= y + objHeight; y1++)
 					if ((getTile(x1, y1) & 0x63) != 0 || (getTile(x1 - 1, y1) & 0x59) != 0 || (getTile(x1, y1 - 1) & 0x56) != 0 || (getTile(x1 - 1, y1 - 1) & 0x6c) != 0)
-						gjd(x1, y1, 35);
+						SetTileType(x1, y1, 35);
 					else
-						gjd(x1, y1, 0);
+						SetTileType(x1, y1, 0);
 
 			}
 
@@ -1425,15 +1425,16 @@ namespace RSCXNALib.Game
 			}
 		}
 
-		public void gkh(int k, int l, int i1, int j1, int k1)
+		public void setRoofTile(int objType, int srcX, int srcY, int destX, int destY)
 		{
+            // 0x13880 = 80000 decimal
 			// dont think theres any problem here. 
 			// Data.wallObjectModelHeight is not the problem either, i debugged the java version and got the same values both here and there. :p
-			int l1 = Data.Data.wallObjectModelHeight[k];
-			if (roofTiles[l][i1] < 0x13880)
-				roofTiles[l][i1] += 0x13880 + l1;
-			if (roofTiles[j1][k1] < 0x13880)
-				roofTiles[j1][k1] += 0x13880 + l1;
+			int height = Data.Data.wallObjectModelHeight[objType];
+			if (roofTiles[srcX][srcY] < 0x13880)
+				roofTiles[srcX][srcY] += 0x13880 + height;
+			if (roofTiles[destX][destY] < 0x13880)
+				roofTiles[destX][destY] += 0x13880 + height;
 		}
 
 		public int getTileGroundOverlayIndex(int x, int y, int height)
@@ -1812,7 +1813,7 @@ namespace RSCXNALib.Game
 								objectWidth = Data.Data.objectHeight[objectIndex];
 							}
 							createObject(x, y, objectIndex, objectRotation);
-							GameObject i2 = arg0[Data.Data.objectModelNumber[objectIndex]].cnk(false, true, false, false);
+							GameObject i2 = arg0[Data.Data.objectModelNumber[objectIndex]].CreateParent(false, true, false, false);
 							int j2 = ((x + x + objectWidth) * 128) / 2;
 							int l2 = ((y + y + objectHeight) * 128) / 2;
 							i2.offsetPosition(j2, -getAveragedElevation(j2, l2), l2);
@@ -1863,35 +1864,35 @@ namespace RSCXNALib.Game
 
 		}
 
-		public void updateTileChunk(int objectX, int objectY, int x, int y, int arg4)
+		public void updateTileChunk(int objectX, int objectY, int x, int y, int val)
 		{
 			GameObject tileChunk = TileChunks[objectX + objectY * 8];
 			if (tileChunk != null)
 			{
-				for (int l = 0; l < tileChunk.vert_count; l++)
-					if (tileChunk.vert_x[l] == x * 128 && tileChunk.vert_z[l] == y * 128)
+				for (int vertIndex = 0; vertIndex < tileChunk.vert_count; vertIndex++)
+					if (tileChunk.vert_x[vertIndex] == x * 128 && tileChunk.vert_z[vertIndex] == y * 128)
 					{
-						tileChunk.cmh(l, arg4);
+						tileChunk.SetVertexColor(vertIndex, val);
 						return;
 					}
 			}
 		}
 
-		public void gli(GameObject wallObj, int wallObjIndex, int i1, int j1, int k1, int l1)
+		public void makeWall(GameObject wallObj, int wallObjIndex, int x, int y, int destX, int destY)
 		{
-			gjd(i1, j1, 40);
-			gjd(k1, l1, 40);
+			SetTileType(x, y, 40);
+			SetTileType(destX, destY, 40);
 			int i2 = Data.Data.wallObjectModelHeight[wallObjIndex];
 			int j2 = Data.Data.wallObjectModel_FaceBack[wallObjIndex];
 			int k2 = Data.Data.wallObjectModel_FaceFront[wallObjIndex];
-			int l2 = i1 * 128;
-			int i3 = j1 * 128;
-			int j3 = k1 * 128;
-			int k3 = l1 * 128;
-			int l3 = wallObj.getVertexIndex(l2, -roofTiles[i1][j1], i3);
-			int i4 = wallObj.getVertexIndex(l2, -roofTiles[i1][j1] - i2, i3);
-			int j4 = wallObj.getVertexIndex(j3, -roofTiles[k1][l1] - i2, k3);
-			int k4 = wallObj.getVertexIndex(j3, -roofTiles[k1][l1], k3);
+			int l2 = x * 128;
+			int i3 = y * 128;
+			int j3 = destX * 128;
+			int k3 = destY * 128;
+			int l3 = wallObj.getVertexIndex(l2, -roofTiles[x][y], i3);
+			int i4 = wallObj.getVertexIndex(l2, -roofTiles[x][y] - i2, i3);
+			int j4 = wallObj.getVertexIndex(j3, -roofTiles[destX][destY] - i2, k3);
+			int k4 = wallObj.getVertexIndex(j3, -roofTiles[destX][destY], k3);
 			int[] ai = {
             l3, i4, j4, k4
         };

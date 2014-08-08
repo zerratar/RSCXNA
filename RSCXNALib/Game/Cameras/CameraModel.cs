@@ -21,7 +21,7 @@ namespace RSCXNALib.Game.Cameras
         public int bkh;
         public int bki;
         public GameObject Object;
-        public int bkk;
+        public int faceVertCountIndex1;
         public int Scale;
         public int bkm;
         public int bkn;

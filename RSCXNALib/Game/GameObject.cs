@@ -21,12 +21,12 @@ namespace RSCXNALib.Game
             isGiantCrystal = false;
             index = -1;
             chn = false;
-            cia = false;
-            cib = false;
+            noCollider = false;
+            dontRecieveShadows = false;
             cic = false;
             cid = false;
             shadeValue = 0xbc614e;
-            ckn = 0xbc614e;
+            distVar = 0xbc614e;
             cla = 180;
             clb = 155;
             clc = 95;
@@ -43,7 +43,7 @@ namespace RSCXNALib.Game
 
         }
 
-        public GameObject(int j, int k, bool flag, bool flag1, bool flag2, bool flag3, bool flag4)
+        public GameObject(int vertCount, int polyCount, bool flag, bool flag1, bool flag2, bool flag3, bool flag4)
         //: base(x, y, flag, flag1, flag2, flag3, flag4)
         {
             objectState = 1;
@@ -53,12 +53,12 @@ namespace RSCXNALib.Game
             isGiantCrystal = false;
             index = -1;
             chn = false;
-            cia = false;
-            cib = false;
+            noCollider = false;
+            dontRecieveShadows = false;
             cic = false;
             cid = false;
             shadeValue = 0xbc614e;
-            ckn = 0xbc614e;
+            distVar = 0xbc614e;
             cla = 180;
             clb = 155;
             clc = 95;
@@ -66,11 +66,11 @@ namespace RSCXNALib.Game
             cle = 512;
             clf = 32;
             chn = flag;
-            cia = flag1;
-            cib = flag2;
+            noCollider = flag1;
+            dontRecieveShadows = flag2;
             cic = flag3;
             cid = flag4;
-            InitializeObject(j, k);
+            InitializeObject(vertCount, polyCount);
         }
 
         private void InitializeObject(int _vert_count, int polygonCount)
@@ -83,7 +83,7 @@ namespace RSCXNALib.Game
 
 #warning possibly texture coordinates.
             cfn = new int[_vert_count];
-            cga = new int[_vert_count];
+            vertexColor = new int[_vert_count];
 
 
             face_vertices_count = new int[polygonCount];
@@ -108,30 +108,30 @@ namespace RSCXNALib.Game
             }
             if (chn)
             {
-                tempVertX = vert_x;
-                tempVertY = vert_y;
-                tempVertZ = vert_z;
+                worldVertX = vert_x;
+                worldVertY = vert_y;
+                worldVertZ = vert_z;
             }
             else
             {
-                tempVertX = new int[_vert_count];
-                tempVertY = new int[_vert_count];
-                tempVertZ = new int[_vert_count];
+                worldVertX = new int[_vert_count];
+                worldVertY = new int[_vert_count];
+                worldVertZ = new int[_vert_count];
             }
-            if (!cib || !cia)
+            if (!dontRecieveShadows || !noCollider)
             {
                 normalX = new int[polygonCount];
                 normalY = new int[polygonCount];
                 normalZ = new int[polygonCount];
             }
-            if (!cia)
+            if (!noCollider)
             {
-                cjf = new int[polygonCount];
-                cjg = new int[polygonCount];
-                cjh = new int[polygonCount];
-                cji = new int[polygonCount];
-                cjj = new int[polygonCount];
-                cjk = new int[polygonCount];
+                faceBoundsMinX = new int[polygonCount];
+                faceBoundsMaxX = new int[polygonCount];
+                faceBoundsMinY = new int[polygonCount];
+                faceBoundsMaxY = new int[polygonCount];
+                faceBoundsMinZ = new int[polygonCount];
+                faceBoundsMaxZ = new int[polygonCount];
             }
             face_count = 0;
             vert_count = 0;
@@ -179,12 +179,12 @@ namespace RSCXNALib.Game
             isGiantCrystal = false;
             index = -1;
             chn = false;
-            cia = false;
-            cib = false;
+            noCollider = false;
+            dontRecieveShadows = false;
             cic = false;
             cid = false;
             shadeValue = 0xbc614e;
-            ckn = 0xbc614e;
+            distVar = 0xbc614e;
             cla = 180;
             clb = 155;
             clc = 95;
@@ -270,7 +270,7 @@ namespace RSCXNALib.Game
             objectState = 1;
         }
 
-        public GameObject(String arg0)
+        public GameObject(String fileName)
         {
             objectState = 1;
             visible = true;
@@ -279,12 +279,12 @@ namespace RSCXNALib.Game
             isGiantCrystal = false;
             index = -1;
             chn = false;
-            cia = false;
-            cib = false;
+            noCollider = false;
+            dontRecieveShadows = false;
             cic = false;
             cid = false;
             shadeValue = 0xbc614e;
-            ckn = 0xbc614e;
+            distVar = 0xbc614e;
             cla = 180;
             clb = 155;
             clc = 95;
@@ -294,12 +294,12 @@ namespace RSCXNALib.Game
             byte[] abyte0 = null;
             try
             {
-                var inputstream = DataOperations.openInputStream(arg0);
+                var inputstream = DataOperations.openInputStream(fileName);
                 //DataInputStream datainputstream = new DataInputStream(inputstream);
                 abyte0 = new byte[3];
                 clg = 0;
                 for (int j = 0; j < 3; j += inputstream.Read(abyte0, j, 3 - j)) ;
-                int l = cnm((sbyte[])(Array)abyte0);
+                int l = getShadeValue((sbyte[])(Array)abyte0);
                 abyte0 = new byte[l];
                 clg = 0;
                 for (int k = 0; k < l; k += inputstream.Read(abyte0, k, l - k)) ;
@@ -311,34 +311,34 @@ namespace RSCXNALib.Game
                 face_count = 0;
                 return;
             }
-            int i1 = cnm((sbyte[])(Array)abyte0);
-            int j1 = cnm((sbyte[])(Array)abyte0);
+            int i1 = getShadeValue((sbyte[])(Array)abyte0);
+            int j1 = getShadeValue((sbyte[])(Array)abyte0);
             InitializeObject(i1, j1);
             cje = new int[j1][];
             for (int k3 = 0; k3 < i1; k3++)
             {
-                int k1 = cnm((sbyte[])(Array)abyte0);
-                int l1 = cnm((sbyte[])(Array)abyte0);
-                int i2 = cnm((sbyte[])(Array)abyte0);
+                int k1 = getShadeValue((sbyte[])(Array)abyte0);
+                int l1 = getShadeValue((sbyte[])(Array)abyte0);
+                int i2 = getShadeValue((sbyte[])(Array)abyte0);
                 getVertexIndex(k1, l1, i2);
             }
 
             for (int l3 = 0; l3 < j1; l3++)
             {
-                int j2 = cnm((sbyte[])(Array)abyte0);
-                int k2 = cnm((sbyte[])(Array)abyte0);
-                int l2 = cnm((sbyte[])(Array)abyte0);
-                int i3 = cnm((sbyte[])(Array)abyte0);
-                cle = cnm((sbyte[])(Array)abyte0);
-                clf = cnm((sbyte[])(Array)abyte0);
-                int j3 = cnm((sbyte[])(Array)abyte0);
+                int j2 = getShadeValue((sbyte[])(Array)abyte0);
+                int k2 = getShadeValue((sbyte[])(Array)abyte0);
+                int l2 = getShadeValue((sbyte[])(Array)abyte0);
+                int i3 = getShadeValue((sbyte[])(Array)abyte0);
+                cle = getShadeValue((sbyte[])(Array)abyte0);
+                clf = getShadeValue((sbyte[])(Array)abyte0);
+                int j3 = getShadeValue((sbyte[])(Array)abyte0);
                 int[] ai = new int[j2];
                 for (int i4 = 0; i4 < j2; i4++)
-                    ai[i4] = cnm((sbyte[])(Array)abyte0);
+                    ai[i4] = getShadeValue((sbyte[])(Array)abyte0);
 
                 int[] ai1 = new int[i3];
                 for (int j4 = 0; j4 < i3; j4++)
-                    ai1[j4] = cnm((sbyte[])(Array)abyte0);
+                    ai1[j4] = getShadeValue((sbyte[])(Array)abyte0);
 
                 int k4 = addFaceVertices(j2, ai, k2, l2);
                 cje[l3] = ai1;
@@ -351,8 +351,8 @@ namespace RSCXNALib.Game
             objectState = 1;
         }
 
-        public GameObject(GameObject[] ai, int j, bool flag, bool flag1, bool flag2, bool flag3)
-        //: base(ai, x, flag, flag1, flag2, flag3)
+        public GameObject(GameObject[] childObjects, int objectCount, bool flag, bool flag1, bool flag2, bool flag3)
+        //: base(childObjects, x, flag, flag1, flag2, flag3)
         {
             objectState = 1;
             visible = true;
@@ -361,12 +361,12 @@ namespace RSCXNALib.Game
             isGiantCrystal = false;
             index = -1;
             chn = false;
-            cia = false;
-            cib = false;
+            noCollider = false;
+            dontRecieveShadows = false;
             cic = false;
             cid = false;
             shadeValue = 0xbc614e;
-            ckn = 0xbc614e;
+            distVar = 0xbc614e;
             cla = 180;
             clb = 155;
             clc = 95;
@@ -374,14 +374,14 @@ namespace RSCXNALib.Game
             cle = 512;
             clf = 32;
             chn = flag;
-            cia = flag1;
-            cib = flag2;
+            noCollider = flag1;
+            dontRecieveShadows = flag2;
             cic = flag3;
-            clm(ai, j, false);
+            BuildGameObject(childObjects, objectCount, false);
         }
 
-        public GameObject(GameObject[] ai, int j)
-        //: base(ai, x)
+        public GameObject(GameObject[] childObjects, int objectCount)
+        //: base(childObjects, x)
         {
             objectState = 1;
             visible = true;
@@ -390,37 +390,37 @@ namespace RSCXNALib.Game
             isGiantCrystal = false;
             index = -1;
             chn = false;
-            cia = false;
-            cib = false;
+            noCollider = false;
+            dontRecieveShadows = false;
             cic = false;
             cid = false;
             shadeValue = 0xbc614e;
-            ckn = 0xbc614e;
+            distVar = 0xbc614e;
             cla = 180;
             clb = 155;
             clc = 95;
             cld = 256;
             cle = 512;
             clf = 32;
-            clm(ai, j, true);
+            BuildGameObject(childObjects, objectCount, true);
         }
 
-        public void clm(GameObject[] arg0, int arg1, bool arg2)
+        public void BuildGameObject(GameObject[] childObjects, int objectCount, bool arg2)
         {
             int j = 0;
             int k = 0;
-            for (int l = 0; l < arg1; l++)
+            for (int l = 0; l < objectCount; l++)
             {
-                j += arg0[l].face_count;
-                k += arg0[l].vert_count;
+                j += childObjects[l].face_count;
+                k += childObjects[l].vert_count;
             }
 
             InitializeObject(k, j);
             if (arg2)
                 cje = new int[j][];
-            for (int i1 = 0; i1 < arg1; i1++)
+            for (int i1 = 0; i1 < objectCount; i1++)
             {
-                GameObject j1 = arg0[i1];
+                GameObject j1 = childObjects[i1];
                 j1.cni();
                 clf = j1.clf;
                 cle = j1.cle;
@@ -440,7 +440,7 @@ namespace RSCXNALib.Game
                     cgh[i2] = j1.cgh[k1];
                     cgg[i2] = j1.cgg[k1];
                     if (arg2)
-                        if (arg1 > 1)
+                        if (objectCount > 1)
                         {
                             cje[i2] = new int[j1.cje[k1].Length + 1];
                             cje[i2][0] = i1;
@@ -513,7 +513,7 @@ namespace RSCXNALib.Game
             }
         }
 
-        public GameObject[] getObjectsWithinArea(int x, int y, int width, int height, int objectSize, int objectCount, int objectType,
+        public GameObject[] getObjectsWithinArea(int x, int y, int width, int height, int objectSize, int objectCount, int maxVertCount,
                 bool arg7)
         {
             cni();
@@ -545,8 +545,8 @@ namespace RSCXNALib.Game
             GameObject[] ai2 = new GameObject[objectCount];
             for (int j1 = 0; j1 < objectCount; j1++)
             {
-                if (ai[j1] > objectType)
-                    ai[j1] = objectType;
+                if (ai[j1] > maxVertCount)
+                    ai[j1] = maxVertCount;
                 ai2[j1] = new GameObject(ai[j1], ai1[j1], true, true, true, arg7, true);
                 ai2[j1].cle = cle;
                 ai2[j1].clf = clf;
@@ -581,7 +581,7 @@ namespace RSCXNALib.Game
             {
                 int k = ai[j] = arg0.getVertexIndex(vert_x[indices[j]], vert_y[indices[j]], vert_z[indices[j]]);
                 arg0.cfn[k] = cfn[indices[j]];
-                arg0.cga[k] = cga[indices[j]];
+                arg0.vertexColor[k] = vertexColor[indices[j]];
             }
 
             int l = arg0.addFaceVertices(indexCount, ai, texture_back[entityTypeIndex], texture_front[entityTypeIndex]);
@@ -592,14 +592,14 @@ namespace RSCXNALib.Game
             arg0.cgg[l] = cgg[entityTypeIndex];
         }
 
-        public void UpdateShading(bool arg0, int arg1, int arg2, int x, int y, int z)
+        public void UpdateShading(bool setShadeValue, int arg1, int arg2, int x, int y, int z)
         {
             clf = 256 - arg1 * 4;
             cle = (64 - arg2) * 16 + 128;
-            if (cib)
+            if (dontRecieveShadows)
                 return;
             for (int j = 0; j < face_count; j++)
-                if (arg0)
+                if (setShadeValue)
                     gouraud_shade[j] = shadeValue;
                 else
                     gouraud_shade[j] = 0;
@@ -607,15 +607,16 @@ namespace RSCXNALib.Game
             cla = x;
             clb = y;
             clc = z;
+            // Calculate magnitude (length) of input vector
             cld = (int)Math.Sqrt(x * x + y * y + z * z);
-            cne();
+            normalize();
         }
 
         public void cmf(int j, int k, int x, int y, int z)
         {
             clf = 256 - j * 4;
             cle = (64 - k) * 16 + 128;
-            if (cib)
+            if (dontRecieveShadows)
             {
                 return;
             }
@@ -625,14 +626,14 @@ namespace RSCXNALib.Game
                 clb = y;
                 clc = z;
                 cld = (int)Math.Sqrt(x * x + y * y + z * z);
-                cne();
+                normalize();
                 return;
             }
         }
 
         public void cmg(int x, int y, int z)
         {
-            if (cib)
+            if (dontRecieveShadows)
             {
                 return;
             }
@@ -643,14 +644,14 @@ namespace RSCXNALib.Game
                 clc = z;
                 // normalized value?
                 cld = (int)Math.Sqrt(x * x + y * y + z * z);
-                cne();
+                normalize();
                 return;
             }
         }
 
-        public void cmh(int j, int k)
+        public void SetVertexColor(int vertIndex, int value)
         {
-            cga[j] = k;
+            vertexColor[vertIndex] = value;
         }
 
         public void offsetMiniPosition(int x, int y, int z)
@@ -718,149 +719,150 @@ namespace RSCXNALib.Game
             }
         }
 
-        private void offsetTempVertices(int x, int y, int z)
+        private void OffsetWorldVertices(int x, int y, int z)
         {
             for (int j = 0; j < vert_count; j++)
             {
-                tempVertX[j] += x;
-                tempVertY[j] += y;
-                tempVertZ[j] += z;
+                worldVertX[j] += x;
+                worldVertY[j] += y;
+                worldVertZ[j] += z;
             }
 
         }
 
-        private void cna(int arg0, int arg1, int arg2)
+        private void rotate(int x, int y, int z)
         {
             for (int k2 = 0; k2 < vert_count; k2++)
             {
-                if (arg2 != 0)
+                if (z != 0)
                 {
-                    int j = cie[arg2];
-                    int i1 = cie[arg2 + 256];
-                    int l1 = tempVertY[k2] * j + tempVertX[k2] * i1 >> 15;
-                    tempVertY[k2] = tempVertY[k2] * i1 - tempVertX[k2] * j >> 15;
-                    tempVertX[k2] = l1;
+                    int j = cie[z];
+                    int i1 = cie[z + 256];
+                    int l1 = worldVertY[k2] * j + worldVertX[k2] * i1 >> 15;
+                    worldVertY[k2] = worldVertY[k2] * i1 - worldVertX[k2] * j >> 15;
+                    worldVertX[k2] = l1;
                 }
-                if (arg0 != 0)
+                if (x != 0)
                 {
-                    int k = cie[arg0];
-                    int j1 = cie[arg0 + 256];
-                    int i2 = tempVertY[k2] * j1 - tempVertZ[k2] * k >> 15;
-                    tempVertZ[k2] = tempVertY[k2] * k + tempVertZ[k2] * j1 >> 15;
-                    tempVertY[k2] = i2;
+                    int k = cie[x];
+                    int j1 = cie[x + 256];
+                    int i2 = worldVertY[k2] * j1 - worldVertZ[k2] * k >> 15;
+                    worldVertZ[k2] = worldVertY[k2] * k + worldVertZ[k2] * j1 >> 15;
+                    worldVertY[k2] = i2;
                 }
-                if (arg1 != 0)
+                if (y != 0)
                 {
-                    int l = cie[arg1];
-                    int k1 = cie[arg1 + 256];
-                    int j2 = tempVertZ[k2] * l + tempVertX[k2] * k1 >> 15;
-                    tempVertZ[k2] = tempVertZ[k2] * k1 - tempVertX[k2] * l >> 15;
-                    tempVertX[k2] = j2;
+                    int l = cie[y];
+                    int k1 = cie[y + 256];
+                    int j2 = worldVertZ[k2] * l + worldVertX[k2] * k1 >> 15;
+                    worldVertZ[k2] = worldVertZ[k2] * k1 - worldVertX[k2] * l >> 15;
+                    worldVertX[k2] = j2;
                 }
             }
 
         }
 
-        private void cnb(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5)
+        private void scaleVertices(int x, int z, int x1, int y, int z1, int y1)
         {
             for (int j = 0; j < vert_count; j++)
             {
-                if (arg0 != 0)
-                    tempVertX[j] += tempVertY[j] * arg0 >> 8;
-                if (arg1 != 0)
-                    tempVertZ[j] += tempVertY[j] * arg1 >> 8;
-                if (arg2 != 0)
-                    tempVertX[j] += tempVertZ[j] * arg2 >> 8;
-                if (arg3 != 0)
-                    tempVertY[j] += tempVertZ[j] * arg3 >> 8;
-                if (arg4 != 0)
-                    tempVertZ[j] += tempVertX[j] * arg4 >> 8;
-                if (arg5 != 0)
-                    tempVertY[j] += tempVertX[j] * arg5 >> 8;
+                if (x != 0)
+                    worldVertX[j] += worldVertY[j] * x >> 8;
+                if (z != 0)
+                    worldVertZ[j] += worldVertY[j] * z >> 8;
+                if (x1 != 0)
+                    worldVertX[j] += worldVertZ[j] * x1 >> 8;
+                if (y != 0)
+                    worldVertY[j] += worldVertZ[j] * y >> 8;
+                if (z1 != 0)
+                    worldVertZ[j] += worldVertX[j] * z1 >> 8;
+                if (y1 != 0)
+                    worldVertY[j] += worldVertX[j] * y1 >> 8;
             }
 
         }
 
-        private void cnc(int arg0, int arg1, int arg2)
+        private void scaleVertices(int x, int y, int z)
         {
             for (int j = 0; j < vert_count; j++)
             {
-                tempVertX[j] = tempVertX[j] * arg0 >> 8;
-                tempVertY[j] = tempVertY[j] * arg1 >> 8;
-                tempVertZ[j] = tempVertZ[j] * arg2 >> 8;
+                worldVertX[j] = worldVertX[j] * x >> 8;
+                worldVertY[j] = worldVertY[j] * y >> 8;
+                worldVertZ[j] = worldVertZ[j] * z >> 8;
             }
 
         }
 
-        private void cnd()
+        private void calculateObjectBounds()
         {
-            chb = chd = chf = 0xf423f;
-            ckn = (int)(chc = che = chg = -chb/*unchecked((int)0xfff0bdc1)*/);
+            boundsMinX = boundsMinY = boundsMinZ = 0xf423f;
+            distVar = (int)(boundsMaxX = boundsMaxY = boundsMaxZ = -boundsMinX/*unchecked((int)0xfff0bdc1)*/);
             for (int j = 0; j < face_count; j++)
             {
                 int[] ai = face_vertices[j];
                 int l = ai[0];
                 int j1 = face_vertices_count[j];
-                int k1;
-                int l1 = k1 = tempVertX[l];
-                int i2;
-                int j2 = i2 = tempVertY[l];
-                int k2;
-                int l2 = k2 = tempVertZ[l];
+                int minX;
+                int maxX = minX = worldVertX[l];
+                int minY;
+                int maxY = minY = worldVertY[l];
+                int minZ;
+                int maxZ = minZ = worldVertZ[l];
                 for (int k = 0; k < j1; k++)
                 {
                     int i1 = ai[k];
-                    if (tempVertX[i1] < k1)
-                        k1 = tempVertX[i1];
+                    if (worldVertX[i1] < minX)
+                        minX = worldVertX[i1];
                     else
-                        if (tempVertX[i1] > l1)
-                            l1 = tempVertX[i1];
-                    if (tempVertY[i1] < i2)
-                        i2 = tempVertY[i1];
+                        if (worldVertX[i1] > maxX)
+                            maxX = worldVertX[i1];
+                    if (worldVertY[i1] < minY)
+                        minY = worldVertY[i1];
                     else
-                        if (tempVertY[i1] > j2)
-                            j2 = tempVertY[i1];
-                    if (tempVertZ[i1] < k2)
-                        k2 = tempVertZ[i1];
+                        if (worldVertY[i1] > maxY)
+                            maxY = worldVertY[i1];
+                    if (worldVertZ[i1] < minZ)
+                        minZ = worldVertZ[i1];
                     else
-                        if (tempVertZ[i1] > l2)
-                            l2 = tempVertZ[i1];
+                        if (worldVertZ[i1] > maxZ)
+                            maxZ = worldVertZ[i1];
                 }
 
-                if (!cia)
+                if (!noCollider)
                 {
-                    cjf[j] = k1;
-                    cjg[j] = l1;
-                    cjh[j] = i2;
-                    cji[j] = j2;
-                    cjj[j] = k2;
-                    cjk[j] = l2;
+                    faceBoundsMinX[j] = minX;
+                    faceBoundsMaxX[j] = maxX;
+                    faceBoundsMinY[j] = minY;
+                    faceBoundsMaxY[j] = maxY;
+                    faceBoundsMinZ[j] = minZ;
+                    faceBoundsMaxZ[j] = maxZ;
                 }
-                if (l1 - k1 > ckn)
-                    ckn = (l1 - k1);
-                if (j2 - i2 > ckn)
-                    ckn = (j2 - i2);
-                if (l2 - k2 > ckn)
-                    ckn = (l2 - k2);
-                if (k1 < chb)
-                    chb = k1;
-                if (l1 > chc)
-                    chc = l1;
-                if (i2 < chd)
-                    chd = i2;
-                if (j2 > che)
-                    che = j2;
-                if (k2 < chf)
-                    chf = k2;
-                if (l2 > chg)
-                    chg = l2;
+
+                if (maxX - minX > distVar)
+                    distVar = (maxX - minX);
+                if (maxY - minY > distVar)
+                    distVar = (maxY - minY);
+                if (maxZ - minZ > distVar)
+                    distVar = (maxZ - minZ);
+                if (minX < boundsMinX)
+                    boundsMinX = minX;
+                if (maxX > boundsMaxX)
+                    boundsMaxX = maxX;
+                if (minY < boundsMinY)
+                    boundsMinY = minY;
+                if (maxY > boundsMaxY)
+                    boundsMaxY = maxY;
+                if (minZ < boundsMinZ)
+                    boundsMinZ = minZ;
+                if (maxZ > boundsMaxZ)
+                    boundsMaxZ = maxZ;
             }
 
         }
 
-        public void cne()
+        public void normalize()
         {
-            if (cib)
+            if (dontRecieveShadows)
                 return;
             int j = cle * cld >> 8;
             for (int k = 0; k < face_count; k++)
@@ -899,22 +901,22 @@ namespace RSCXNALib.Game
 
         }
 
-        public void cnf()
+        public void calculateNormals()
         {
-            if (cib && cia)
+            if (dontRecieveShadows && noCollider)
                 return;
             for (int j = 0; j < face_count; j++)
             {
                 int[] ai = face_vertices[j];
-                int k = tempVertX[ai[0]];
-                int l = tempVertY[ai[0]];
-                int i1 = tempVertZ[ai[0]];
-                int j1 = tempVertX[ai[1]] - k;
-                int k1 = tempVertY[ai[1]] - l;
-                int l1 = tempVertZ[ai[1]] - i1;
-                int i2 = tempVertX[ai[2]] - k;
-                int j2 = tempVertY[ai[2]] - l;
-                int k2 = tempVertZ[ai[2]] - i1;
+                int k = worldVertX[ai[0]];
+                int l = worldVertY[ai[0]];
+                int i1 = worldVertZ[ai[0]];
+                int j1 = worldVertX[ai[1]] - k;
+                int k1 = worldVertY[ai[1]] - l;
+                int l1 = worldVertZ[ai[1]] - i1;
+                int i2 = worldVertX[ai[2]] - k;
+                int j2 = worldVertY[ai[2]] - l;
+                int k2 = worldVertZ[ai[2]] - i1;
 
                 int xDistance = k1 * k2 - j2 * l1;
                 int yDistance = l1 * i2 - k2 * j1;
@@ -935,24 +937,24 @@ namespace RSCXNALib.Game
                 cgh[j] = -1;
             }
 
-            cne();
+            normalize();
         }
 
-        public void cng()
+        public void UpdateWorldTransformation()
         {
             if (objectState == 2)
             {
                 objectState = 0;
                 for (int j = 0; j < vert_count; j++)
                 {
-                    tempVertX[j] = vert_x[j];
-                    tempVertY[j] = vert_y[j];
-                    tempVertZ[j] = vert_z[j];
+                    worldVertX[j] = vert_x[j];
+                    worldVertY[j] = vert_y[j];
+                    worldVertZ[j] = vert_z[j];
                 }
 
 
-                ckn = (int)(chc = che = chg = 0x98967f);
-                chb = (int)(chd = chf = -chg/*unchecked((int)0xff676981)*/);
+                distVar = (int)(boundsMaxX = boundsMaxY = boundsMaxZ = 0x98967f);
+                boundsMinX = (int)(boundsMinY = boundsMinZ = -boundsMaxZ/*unchecked((int)0xff676981)*/);
                 return;
             }
             if (objectState == 1)
@@ -960,29 +962,29 @@ namespace RSCXNALib.Game
                 objectState = 0;
                 for (int k = 0; k < vert_count; k++)
                 {
-                    tempVertX[k] = vert_x[k];
-                    tempVertY[k] = vert_y[k];
-                    tempVertZ[k] = vert_z[k];
+                    worldVertX[k] = vert_x[k];
+                    worldVertY[k] = vert_y[k];
+                    worldVertZ[k] = vert_z[k];
                 }
 
                 if (ckm >= 2)
-                    cna(rotationX, rotationY, rotationZ);
+                    rotate(rotationX, rotationY, rotationZ);
                 if (ckm >= 3)
-                    cnc(ckd, cke, ckf);
+                    scaleVertices(ckd, cke, ckf);
                 if (ckm >= 4)
-                    cnb(ckg, ckh, cki, ckj, ckk, ckl);
+                    scaleVertices(ckg, ckh, cki, ckj, ckk, ckl);
                 if (ckm >= 1)
-                    offsetTempVertices(positionX, positionY, positionZ);
-                cnd();
-                cnf();
+                    OffsetWorldVertices(positionX, positionY, positionZ);
+                calculateObjectBounds();
+                calculateNormals();
             }
         }
 
         public void cnh(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6,
                 int arg7)
         {
-            cng();
-            if (chf > Camera.bgj || chg < Camera.bgi || chb > Camera.bgf || chc < Camera.bge || chd > Camera.bgh || che < Camera.bgg)
+            UpdateWorldTransformation();
+            if (boundsMinZ > Camera.farZ || boundsMaxZ < Camera.nearZ || boundsMinX > Camera.farX || boundsMaxX < Camera.nearX || boundsMinY > Camera.farY || boundsMaxY < Camera.nearY)
             {
                 visible = false;
                 return;
@@ -1011,9 +1013,9 @@ namespace RSCXNALib.Game
             }
             for (int k2 = 0; k2 < vert_count; k2++)
             {
-                int l2 = tempVertX[k2] - arg0;
-                int i3 = tempVertY[k2] - arg1;
-                int j3 = tempVertZ[k2] - arg2;
+                int l2 = worldVertX[k2] - arg0;
+                int i3 = worldVertY[k2] - arg1;
+                int j3 = worldVertZ[k2] - arg2;
                 if (arg5 != 0)
                 {
                     int j = i3 * i1 + l2 * j1 >> 15;
@@ -1049,12 +1051,12 @@ namespace RSCXNALib.Game
 
         public void cni()
         {
-            cng();
+            UpdateWorldTransformation();
             for (int j = 0; j < vert_count; j++)
             {
-                vert_x[j] = tempVertX[j];
-                vert_y[j] = tempVertY[j];
-                vert_z[j] = tempVertZ[j];
+                vert_x[j] = worldVertX[j];
+                vert_y[j] = worldVertY[j];
+                vert_z[j] = worldVertZ[j];
             }
 
             positionX = positionY = positionZ = 0;
@@ -1064,7 +1066,7 @@ namespace RSCXNALib.Game
             ckm = 0;
         }
 
-        public GameObject cnj()
+        public GameObject CreateParent()
         {
             GameObject[] ai = new GameObject[1];
             ai[0] = this;
@@ -1074,7 +1076,7 @@ namespace RSCXNALib.Game
             return j;
         }
 
-        public GameObject cnk(bool flag, bool flag1, bool flag2, bool flag3)
+        public GameObject CreateParent(bool flag, bool flag1, bool flag2, bool flag3)
         {
             GameObject[] ai = new GameObject[1];
             ai[0] = this;
@@ -1083,7 +1085,7 @@ namespace RSCXNALib.Game
             return j;
         }
 
-        public void cnl(GameObject j)
+        public void CopyTranslation(GameObject j)
         {
             rotationX = j.rotationX;
             rotationY = j.rotationY;
@@ -1095,7 +1097,7 @@ namespace RSCXNALib.Game
             objectState = 1;
         }
 
-        //public int cnm(sbyte[] _vert_count)
+        //public int getShadeValue(sbyte[] _vert_count)
         //{
         //    for (; _vert_count[clg] == 10 || _vert_count[clg] == 13; clg++) ;
         //    int x = cih[_vert_count[clg++]];
@@ -1107,7 +1109,7 @@ namespace RSCXNALib.Game
         //    return y;
         //}
 
-        public int cnm(sbyte[] arg0)
+        public int getShadeValue(sbyte[] arg0)
         {
             for (; arg0[clg] == 10 || arg0[clg] == 13; clg++) ;
             int j = cih[arg0[clg++] & 0xff];
@@ -1126,7 +1128,7 @@ namespace RSCXNALib.Game
         public int[] cfl;
         public int[] cfm;
         public int[] cfn;
-        public int[] cga;
+        public int[] vertexColor;
         public int face_count;
         public int[] face_vertices_count;
         public int[][] face_vertices;
@@ -1141,12 +1143,12 @@ namespace RSCXNALib.Game
         public int cgm;
         public int objectState;
         public bool visible;
-        public int chb;
-        public int chc;
-        public int chd;
-        public int che;
-        public int chf;
-        public int chg;
+        public int boundsMinX;
+        public int boundsMaxX;
+        public int boundsMinY;
+        public int boundsMaxY;
+        public int boundsMinZ;
+        public int boundsMaxZ;
         public bool chh;
         public bool chi;
         public bool isGiantCrystal;
@@ -1154,8 +1156,8 @@ namespace RSCXNALib.Game
         public int[] entityType;
         public int[] chm;
         private bool chn;
-        public bool cia;
-        public bool cib;
+        public bool noCollider;
+        public bool dontRecieveShadows;
         public bool cic;
         public bool cid;
         private static int[] cie;
@@ -1170,17 +1172,17 @@ namespace RSCXNALib.Game
 
         public Vector3[] _vertices;
 
-        public int[] tempVertX;
-        public int[] tempVertY;
-        public int[] tempVertZ;
+        public int[] worldVertX;
+        public int[] worldVertY;
+        public int[] worldVertZ;
         private int totalFaceCount;
         private int[][] cje;
-        private int[] cjf;
-        private int[] cjg;
-        private int[] cjh;
-        private int[] cji;
-        private int[] cjj;
-        private int[] cjk;
+        private int[] faceBoundsMinX;
+        private int[] faceBoundsMaxX;
+        private int[] faceBoundsMinY;
+        private int[] faceBoundsMaxY;
+        private int[] faceBoundsMinZ;
+        private int[] faceBoundsMaxZ;
         private int positionX;
         private int positionY;
         private int positionZ;
@@ -1197,7 +1199,7 @@ namespace RSCXNALib.Game
         private int ckk;
         private int ckl;
         private int ckm;
-        private int ckn;
+        private int distVar;
         private int cla;
         private int clb;
         private int clc;

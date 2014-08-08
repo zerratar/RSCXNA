@@ -69,9 +69,9 @@ namespace RSCXNALib.Game.Cameras
             beg = new int[maxSceneObjects];
             if (bfe == null)
                 bfe = new sbyte[17691];
-            bdb = 0;
-            bdc = 0;
-            bdd = 0;
+            viewX = 0;
+            ViewY = 0;
+            ViewZ = 0;
             bde = 0;
             bdf = 0;
             bdg = 0;
@@ -357,18 +357,18 @@ namespace RSCXNALib.Game.Cameras
                 j1 = j1 * k3 - k * l2 >> 15;
                 k = j4;
             }
-            if (k < bge)
-                bge = k;
-            if (k > bgf)
-                bgf = k;
-            if (i1 < bgg)
-                bgg = i1;
-            if (i1 > bgh)
-                bgh = i1;
-            if (j1 < bgi)
-                bgi = j1;
-            if (j1 > bgj)
-                bgj = j1;
+            if (k < nearX)
+                nearX = k;
+            if (k > farX)
+                farX = k;
+            if (i1 < nearY)
+                nearY = i1;
+            if (i1 > farY)
+                farY = i1;
+            if (j1 < nearZ)
+                nearZ = j1;
+            if (j1 > farZ)
+                farZ = j1;
         }
 
         public void finishCamera()
@@ -376,12 +376,12 @@ namespace RSCXNALib.Game.Cameras
             bgd = gameImage.interlace;
             int k4 = bcj * zoom1 >> bcn;
             int l4 = bck * zoom1 >> bcn;
-            bge = 0;
-            bgf = 0;
-            bgg = 0;
-            bgh = 0;
-            bgi = 0;
-            bgj = 0;
+            nearX = 0;
+            farX = 0;
+            nearY = 0;
+            farY = 0;
+            nearZ = 0;
+            farZ = 0;
             bia(-k4, -l4, zoom1);
             bia(-k4, l4, zoom1);
             bia(k4, -l4, zoom1);
@@ -390,18 +390,18 @@ namespace RSCXNALib.Game.Cameras
             bia(-bcj, bck, 0);
             bia(bcj, -bck, 0);
             bia(bcj, bck, 0);
-            bge += bdb;
-            bgf += bdb;
-            bgg += bdc;
-            bgh += bdc;
-            bgi += bdd;
-            bgj += bdd;
+            nearX += viewX;
+            farX += viewX;
+            nearY += ViewY;
+            farY += ViewY;
+            nearZ += ViewZ;
+            farZ += ViewZ;
             objectCache[currentObjectCount] = highlightedObject;
             highlightedObject.objectState = 2;
             for (int k1 = 0; k1 < currentObjectCount; k1++)
             {
                 if (objectCache[k1] != null)
-                    objectCache[k1].cnh(bdb, bdc, bdd, bde, bdf, bdg, bcn, bbf);
+                    objectCache[k1].cnh(viewX, ViewY, ViewZ, bde, bdf, bdg, bcn, bbf);
             }
 
             int msSlept = 0;
@@ -412,7 +412,7 @@ namespace RSCXNALib.Game.Cameras
                 if (msSlept > 1000) return;
             }
 
-            objectCache[currentObjectCount].cnh(bdb, bdc, bdd, bde, bdf, bdg, bcn, bbf);
+            objectCache[currentObjectCount].cnh(viewX, ViewY, ViewZ, bde, bdf, bdg, bcn, bbf);
             currentModelIndex = 0;
             for (int i5 = 0; i5 < currentObjectCount; i5++)
             {
@@ -467,21 +467,21 @@ namespace RSCXNALib.Game.Cameras
                                 {
                                     CameraModel l9 = visibleModels[currentModelIndex];
                                     l9.Object = k;
-                                    l9.bkk = l1;
+                                    l9.faceVertCountIndex1 = l1;
                                     bja(currentModelIndex);
-                                    int l10;
+                                    int textureIndex;
                                     if (l9.blb < 0)
-                                        l10 = k.texture_back[l1];
+                                        textureIndex = k.texture_back[l1];
                                     else
-                                        l10 = k.texture_front[l1];
-                                    if (l10 != 0xbc614e)
+                                        textureIndex = k.texture_front[l1];
+                                    if (textureIndex != 0xbc614e)
                                     {
                                         int l3 = 0;
                                         for (int l11 = 0; l11 < j5; l11++)
                                             l3 += k.cfk[ai1[l11]];
 
                                         l9.Scale = l3 / j5 + k.cgm;
-                                        l9.currentTextureIndex = l10;
+                                        l9.currentTextureIndex = textureIndex;
                                         currentModelIndex++;
                                     }
                                 }
@@ -510,7 +510,7 @@ namespace RSCXNALib.Game.Cameras
                         {
                             CameraModel l12 = visibleModels[currentModelIndex];
                             l12.Object = i1;
-                            l12.bkk = i2;
+                            l12.faceVertCountIndex1 = i2;
                             bjb(currentModelIndex);
                             l12.Scale = (l8 + i1.cfk[ai[1]]) / 2;
                             currentModelIndex++;
@@ -528,7 +528,7 @@ namespace RSCXNALib.Game.Cameras
             {
                 CameraModel l6 = visibleModels[k5];
                 GameObject model = l6.Object;
-                int j2 = l6.bkk;
+                int j2 = l6.faceVertCountIndex1;
                 if (model == highlightedObject)
                 {
                     int[] ai2 = model.face_vertices[j2];
@@ -574,9 +574,9 @@ namespace RSCXNALib.Game.Cameras
                         vertZ[l13] = model.cfk[i4];
                         if (model.gouraud_shade[j2] == 0xbc614e)
                             if (l6.blb < 0)
-                                j12 = (model.clf - model.cfn[i4]) + model.cga[i4];
+                                j12 = (model.clf - model.cfn[i4]) + model.vertexColor[i4];
                             else
-                                j12 = model.clf + model.cfn[i4] + model.cga[i4];
+                                j12 = model.clf + model.cfn[i4] + model.vertexColor[i4];
                         if (model.cfk[i4] >= bbf)
                         {
                             bfl[k10] = model.cfl[i4];
@@ -2624,7 +2624,7 @@ namespace RSCXNALib.Game.Cameras
 
         }
 
-        public void setCamera(int x, int y, int z, int k1, int rotation, int i2, int distance)
+        public void SetCameraTransform(int x, int y, int z, int k1, int rotation, int i2, int distance)
         {
             k1 &= 0x3ff;
             rotation &= 0x3ff;
@@ -2659,16 +2659,16 @@ namespace RSCXNALib.Game.Cameras
                 yOffset = yOffset * k4 - xOffset * l3 >> 15;
                 xOffset = j5;
             }
-            bdb = x - xOffset;
-            bdc = y - yOffset;
-            bdd = z - zOffset;
+            viewX = x - xOffset;
+            ViewY = y - yOffset;
+            ViewZ = z - zOffset;
         }
 
         private void bja(int arg0)
         {
             CameraModel l1 = visibleModels[arg0];
             GameObject k = l1.Object;
-            int i1 = l1.bkk;
+            int i1 = l1.faceVertCountIndex1;
             int[] ai = k.face_vertices[i1];
             int j1 = k.face_vertices_count[i1];
             int k1 = k.cgh[i1];
@@ -2747,43 +2747,43 @@ namespace RSCXNALib.Game.Cameras
         {
             CameraModel l1 = visibleModels[arg0];
             GameObject k = l1.Object;
-            int i1 = l1.bkk;
-            int[] ai = k.face_vertices[i1];
+            int i1 = l1.faceVertCountIndex1;
+            int[] faceVertices = k.face_vertices[i1];
             int k1 = 0;
             int i2 = 0;
             int j2 = 1;
-            int k2 = k.cfi[ai[0]];
-            int l2 = k.cfj[ai[0]];
-            int i3 = k.cfk[ai[0]];
+            int k2 = k.cfi[faceVertices[0]];
+            int l2 = k.cfj[faceVertices[0]];
+            int i3 = k.cfk[faceVertices[0]];
             k.cgg[i1] = 1;
             k.cgh[i1] = 0;
             l1.blb = k2 * k1 + l2 * i2 + i3 * j2;
             l1.bkm = k1;
             l1.bkn = i2;
             l1.bla = j2;
-            int j3 = k.cfk[ai[0]];
+            int j3 = k.cfk[faceVertices[0]];
             int k3 = j3;
-            int l3 = k.cfl[ai[0]];
+            int l3 = k.cfl[faceVertices[0]];
             int i4 = l3;
-            if (k.cfl[ai[1]] < l3)
-                l3 = k.cfl[ai[1]];
+            if (k.cfl[faceVertices[1]] < l3)
+                l3 = k.cfl[faceVertices[1]];
             else
-                i4 = k.cfl[ai[1]];
-            int j4 = k.cfm[ai[1]];
-            int k4 = k.cfm[ai[0]];
-            int j1 = k.cfk[ai[1]];
+                i4 = k.cfl[faceVertices[1]];
+            int j4 = k.cfm[faceVertices[1]];
+            int k4 = k.cfm[faceVertices[0]];
+            int j1 = k.cfk[faceVertices[1]];
             if (j1 > k3)
                 k3 = j1;
             else
                 if (j1 < j3)
                     j3 = j1;
-            j1 = k.cfl[ai[1]];
+            j1 = k.cfl[faceVertices[1]];
             if (j1 > i4)
                 i4 = j1;
             else
                 if (j1 < l3)
                     l3 = j1;
-            j1 = k.cfm[ai[1]];
+            j1 = k.cfm[faceVertices[1]];
             if (j1 > k4)
                 k4 = j1;
             else
@@ -2813,8 +2813,8 @@ namespace RSCXNALib.Game.Cameras
                 return false;
             GameObject k = arg0.Object;
             GameObject i1 = arg1.Object;
-            int j1 = arg0.bkk;
-            int k1 = arg1.bkk;
+            int j1 = arg0.faceVertCountIndex1;
+            int k1 = arg1.faceVertCountIndex1;
             int[] ai = k.face_vertices[j1];
             int[] ai1 = i1.face_vertices[k1];
             int l1 = k.face_vertices_count[j1];
@@ -2922,8 +2922,8 @@ namespace RSCXNALib.Game.Cameras
         {
             GameObject k = arg0.Object;
             GameObject i1 = arg1.Object;
-            int j1 = arg0.bkk;
-            int k1 = arg1.bkk;
+            int j1 = arg0.faceVertCountIndex1;
+            int k1 = arg1.faceVertCountIndex1;
             int[] ai = k.face_vertices[j1];
             int[] ai1 = i1.face_vertices[k1];
             int l1 = k.face_vertices_count[j1];
@@ -3518,9 +3518,9 @@ namespace RSCXNALib.Game.Cameras
         private int bcm;
         private int bcn;
         private int bda;
-        private int bdb;
-        private int bdc;
-        private int bdd;
+        private int viewX;
+        private int ViewY;
+        private int ViewZ;
         private int bde;
         private int bdf;
         private int bdg;
@@ -3562,12 +3562,12 @@ namespace RSCXNALib.Game.Cameras
         public int[] vertY;
         public int[] vertZ;
         public bool bgd;
-        public static int bge;
-        public static int bgf;
-        public static int bgg;
-        public static int bgh;
-        public static int bgi;
-        public static int bgj;
+        public static int nearX;
+        public static int farX;
+        public static int nearY;
+        public static int farY;
+        public static int nearZ;
+        public static int farZ;
         public int bgk;
         public int bgl;
 
